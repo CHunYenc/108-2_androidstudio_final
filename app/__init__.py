@@ -1,7 +1,4 @@
-from . import views
-from .api import api as api_blueprint
-from .models import Users
-from flask import Flask, Blueprint
+from flask import Flask , Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -11,11 +8,16 @@ if app.config["ENV"] == "production":
 else:
     app.config.from_object("config.DevelopmentConfig")
 
-# Models 關於資料庫
+print(f'ENV is set to: {app.config["ENV"]}')
+
+# Models
 db = SQLAlchemy(app)
 Migrate = Migrate(app, db)
 # db
+from .models import Users
 # Views And Router
+from .api import api as api_blueprint
 # # API
-app.register_blueprint(api_blueprint, url_prefix='/api')
+app.register_blueprint(api_blueprint , url_prefix='/api')
 # # Access
+from . import views
