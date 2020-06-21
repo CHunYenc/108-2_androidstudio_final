@@ -10,11 +10,11 @@ else:
 
 print(f'ENV is set to: {app.config["ENV"]}')
 
-
 # Models 關於資料庫
 db = SQLAlchemy(app)
-Migrate = Migrate(app,db)
-
+Migrate = Migrate(app, db)
+# db
+from .models import Users
 # Views And Router
 from .api import api as api_blueprint
 # # API

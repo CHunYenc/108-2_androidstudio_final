@@ -4,12 +4,19 @@ from flask import request, redirect, flash, Blueprint, jsonify
 # from .forms import LoginForm
 
 
-def mess(mess):
+def su_mess(mess):
     data = {
+        'success':1,
         'mess': mess,
     }
     return jsonify(data)
 
+def er_mess(mess):
+    data = {
+        'success': 0,
+        'mess':mess,
+    }
+    return jsonify(data)
 
 @app.route('/')
 def index():
@@ -18,9 +25,9 @@ def index():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return mess("Not Page!!!!"), 404
+    return er_mess("Not Page!!!!"), 404
 
 
 @app.errorhandler(500)
 def internal_server_error(e):
-    return mess('連線失敗'), 500
+    return er_mess('連線失敗'), 500

@@ -10,7 +10,7 @@ os.urandom(24)
 
 
 class Config(object):
-    DEBUG = False
+    DEBUG = True
     TESTING = False
     JSON_AS_ASCII = False
     # 格式 mysql://username:password@localhost:port/databasename
