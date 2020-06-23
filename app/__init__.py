@@ -1,4 +1,4 @@
-from flask import Flask , Blueprint
+from flask import Flask, Blueprint
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -18,6 +18,6 @@ from .models import Users
 # Views And Router
 from .api import api as api_blueprint
 # # API
-app.register_blueprint(api_blueprint , url_prefix='/api')
+app.register_blueprint(api_blueprint, url_prefix='/api')
 # # Access
 from . import views
