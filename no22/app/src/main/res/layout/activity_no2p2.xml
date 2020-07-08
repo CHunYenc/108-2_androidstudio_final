@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".no2p2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="773dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/tv_bmi"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/et_bmiheight"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                android:ems="7"
+                android:hint="身高 ex : 170cm"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintEnd_toStartOf="@+id/et_bmiweight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+            <EditText
+                android:id="@+id/et_bmiweight"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="48dp"
+                android:ems="7"
+                android:hint="體重 ex : 45kg"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintBottom_toBottomOf="@+id/et_bmiheight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_bmiheight"
+                app:layout_constraintTop_toTopOf="@+id/et_bmiheight" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                android:text="@string/tv_climb"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_bmiheight" />
+
+            <EditText
+                android:id="@+id/et_climbfirst"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:ems="4"
+                android:hint="1:30"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintEnd_toStartOf="@+id/et_climbsecond"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <EditText
+                android:id="@+id/et_climbsecond"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="33dp"
+                android:ems="4"
+                android:hint="2:30"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintBottom_toBottomOf="@+id/et_climbfirst"
+                app:layout_constraintEnd_toStartOf="@+id/et_climbthird"
+                app:layout_constraintStart_toEndOf="@+id/et_climbfirst"
+                app:layout_constraintTop_toTopOf="@+id/et_climbfirst" />
+
+            <EditText
+                android:id="@+id/et_climbthird"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="48dp"
+                android:ems="4"
+                android:hint="3:30"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintBottom_toBottomOf="@+id/et_climbsecond"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_climbsecond"
+                app:layout_constraintTop_toTopOf="@+id/et_climbsecond" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                android:text="@string/tv_sittingforward"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_climbfirst" />
+
+            <EditText
+                android:id="@+id/et_sffirst"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                android:ems="7"
+                android:hint="First"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                app:layout_constraintEnd_toStartOf="@+id/et_sfsecond"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/et_sfsecond"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="48dp"
+                android:ems="7"
+                android:hint="Second"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                app:layout_constraintBottom_toBottomOf="@+id/et_sffirst"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_sffirst"
+                app:layout_constraintTop_toTopOf="@+id/et_sffirst" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                android:text="@string/tv_situp"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_sffirst" />
+
+            <EditText
+                android:id="@+id/et_situp30"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                android:ems="7"
+                android:hint="30'秒"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                app:layout_constraintEnd_toStartOf="@+id/et_situp60"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <EditText
+                android:id="@+id/et_situp60"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="48dp"
+                android:ems="7"
+                android:hint="60'秒"
+                android:inputType="numberDecimal"
+                android:maxLength="2"
+                app:layout_constraintBottom_toBottomOf="@+id/et_situp30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_situp30"
+                app:layout_constraintTop_toTopOf="@+id/et_situp30" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="38dp"
+                android:text="@string/tv_standinglongjump"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_situp30" />
+
+            <EditText
+                android:id="@+id/et_sljsecond"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="48dp"
+                android:ems="7"
+                android:hint="Second"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintBottom_toBottomOf="@+id/et_sljfirst"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_sljfirst"
+                app:layout_constraintTop_toTopOf="@+id/et_sljfirst" />
+
+            <EditText
+                android:id="@+id/et_sljfirst"
+                android:layout_width="149dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="24dp"
+                android:ems="7"
+                android:hint="First"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                app:layout_constraintEnd_toStartOf="@+id/et_sljsecond"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <Button
+                android:id="@+id/bt_final"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:onClick="count"
+                android:text="總結算"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_sljsecond" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
+                android:onClick="yy"
+                android:text="歷年資料查詢"
+                app:layout_constraintStart_toEndOf="@+id/bt_final"
+                app:layout_constraintTop_toTopOf="@+id/bt_final" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,22 @@
 | httpd (Apache) | 2.4.6   |
 | Python         | 3.6.8   |
 
-### 
+### run
+
+1. py 環境建置需完成
+```
+sudo python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+flask db init
+flask db migrate
+flask db upgrade
+flask run
+
+更改環境 預設為 production > development
+export FLASK_ENV=development
+```
 ### Python 環境建置
 
 ```

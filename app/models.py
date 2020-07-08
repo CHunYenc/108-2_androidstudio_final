@@ -8,7 +8,7 @@ class Users(db.Model):
     u_password = db.Column(db.String(10), nullable=False)
     u_gender = db.Column(db.Boolean, nullable=False)
     u_data = db.relationship('data', backref='users', lazy=True)
-# a = Users(u_id="b10610020",u_password="123",u_gender=1)
+# a = Users(u_id="b10600000",u_password="123",u_gender=1)
 
 
 class data(db.Model):
@@ -20,3 +20,4 @@ class data(db.Model):
     d_sljmax = db.Column(db.Float, nullable=False)
     d_ctime = db.Column(db.DateTime, default=datetime.now)
     u_id = db.Column(db.String(9), db.ForeignKey('users.u_id'), nullable=False)
+# d = data(d_bmi=1,d_climb=2, d_sfmax=3, d_sitemax=4, d_sljmax=5, u_id="b10610020")

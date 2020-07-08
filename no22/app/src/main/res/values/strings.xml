@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">no2</string>
+    <string name="et_age">AGE：</string>
+    <string name="tv_bmi">BMI：</string>
+    <string name="tv_climb">登階：</string>
+    <string name="tv_situp">仰臥起坐：</string>
+    <string name="tv_sittingforward">坐肢體前彎：</string>
+    <string name="tv_standinglongjump">立定跳遠：</string>
+    <string name="rb_men">男</string>
+    <string name="rb_women">女</string>
+    <string name="bt_start">開始換算</string>
+    <string name="tv_word" />
+</resources>
