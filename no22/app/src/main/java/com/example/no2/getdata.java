@@ -48,7 +48,7 @@ public class getdata extends AppCompatActivity {
         Intent it = getIntent();
         String name =  it.getStringExtra("name");
 
-        String url = "http://funar.net/api/getdata/"+name;
+        String url = "http://localhost/api/getdata/"+name;
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override

@@ -22,7 +22,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class uu1 extends AppCompatActivity {
-    String showUri = "http://funar.net/api/getdata";
+    String showUri = "http://localhost/api/getdata";
 //    com.android.volley.RequestQueue requestQueue;
 //    @RequiresApi(api = Build.VERSION_CODES.N)
 //

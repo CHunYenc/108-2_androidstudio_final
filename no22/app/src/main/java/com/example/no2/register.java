@@ -30,7 +30,7 @@ public class register extends AppCompatActivity {
     TextView tva,tv,tv2;
     RadioButton rdbmen,rdbwommen;
     RadioGroup rg_gender;
-    private String URL_REGIST="http://funar.net/api/register";
+    private String URL_REGIST="http://localhost/api/register";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

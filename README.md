@@ -1,6 +1,6 @@
 # 108-2_androidstudio_final
 
-### 環境
+### Env
 
 | Tools          | Version |
 | -------------- | ------- |
@@ -8,82 +8,11 @@
 | httpd (Apache) | 2.4.6   |
 | Python         | 3.6.8   |
 
-### run
+### How to run Backend ?
 
-1. py 環境建置需完成
-```
-sudo python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-flask db init
-flask db migrate
-flask db upgrade
-flask run
-
-更改環境 預設為 production > development
-export FLASK_ENV=development
-```
-### Python 環境建置
-
-```
-# 108-2_androidstudio_final/config.py
-import os
-'''
-
-flask shell
-import os
-os.urandom(24)
-產生後替代 SECRET_KEY 
-'''
-
-class Config(object):
-    DEBUG = True
-    TESTING = False
-    JSON_AS_ASCII = False
-    # 格式 mysql://username:password@localhost:port/databasename
-    SECRET_KEY = 'This is a Key HAHA'
-
-
-class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:Android_0620@localhost:3306/db_ad'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    pass
-
-
-class DevelopmentConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:@localhost:3306/db_ad'
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
-    DEBUG = True
-
-
-class TestingConfig(Config):
-    TESTING = True
-
-
-```
-
-### Apache 首次設定
-
-##### httpd.conf
-```
-# /etc/httpd/conf/httpd.conf
-# ... 加入以下
-LoadModule wsgi_module modules/mod_wsgi.so
-
-<VirtualHost *:80>
-    DocumentRoot "/var/www/final"
-    WSGIScriptAlias / "/var/www/final/wsgi.py"
-    ServerName funar.net
-    <Directory /var/www/final>
-        AllowOverride all
-        Require all granted
-    </Directory>
-</VirtualHost>
-```
-##### 00-wsgi.conf
-```
-# /etc/httpd/conf.modules.d/00-wsgi.conf
-LoadModule wsgi_module /...路徑.../venv/lib/python3.6/site-packages/mod_wsgi/server/mod_wsgi-py36.cpython-36m-x86_64-linux-gnu.so 
-```
-
+1. [Create python venv](/README_py.md)
+   1. Windows
+   2. Linux
+   3. Flask run
+   4. Flask configuration 
+2. [Deploy python backend flask to Apache server](/README_Apache.md)

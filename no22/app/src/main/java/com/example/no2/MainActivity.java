@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tv1, tv2;
     EditText etid, ethappy;
 
-    private String url_address = "http://funar.net/api/login";
+    private String url_address = "http://localhost/api/login";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -27,7 +27,7 @@ public class answer extends AppCompatActivity {
 
     TextView tvtestbmi,tvtestclimb,tvtestsfmax,tvtestsitupmax,tvtestsljmax,tv12;
     float bmi,climb,sfmax,situpmax,sljmax;
-    private String URL_REGIST="http://funar.net/api/postdata";
+    private String URL_REGIST="http://localhost/api/postdata";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
